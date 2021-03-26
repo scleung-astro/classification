@@ -111,9 +111,9 @@ class SimpleKMean():
             for i, point in enumerate(X): 
                 dmin_sq = np.inf
                 for j, centroid in enumerate(self.centroids):
-                    if (centroid[0] - point[0])**2 + (centroid[0] - point[0])**2 < dmin_sq:
+                    if (centroid[0] - point[0])**2 + (centroid[1] - point[1])**2 < dmin_sq:
                         cluster_idx[i] = j
-                        dmin_sq = (centroid[0] - point[0])**2 + (centroid[0] - point[0])**2       
+                        dmin_sq = (centroid[0] - point[0])**2 + (centroid[1] - point[1])**2       
                              
             # Step 2: Find the new centroid
             for i, point in enumerate(X):
